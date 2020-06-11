@@ -1,24 +1,34 @@
 import React from 'react';
-import logo from './logo.svg';
+import ToDoForm from './ToDoForm/ToDoForm.component';
 import './App.css';
+import Particles from 'react-particles-js';
 
-function App() {
-  return (
+
+function App({clearList}) {
+  
+  const particleOptions = {
+	  particles:{
+	        number: {
+	          value: 100,
+	          density: {
+	            enable: true,
+	            value_area: 500
+	          }
+	        }
+	  }
+	}
+
+	
+
+
+  	return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Particles className='particles'
+                  params={particleOptions}
+       /> 
+      <h1 className='title'>ToDo's List</h1>
+      <ToDoForm clearList = {clearList} />
+      
     </div>
   );
 }

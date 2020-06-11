@@ -1,0 +1,58 @@
+.toDoForm{
+	
+	
+	
+
+	.input{
+		height: 50px;
+		font-size: 20px;
+		background-color: #E9FD2F ;
+		color: black;
+		border:0;
+		margin: 20px;
+  		padding: 0 20px;
+  		outline: none;
+  		border-radius: 20px;
+  		
+
+  		.input::placeholder{
+  			color:#F2FCFE;
+  		}
+	}
+	.unorderedList{
+		list-style-type: none;
+		.listItem{
+			width: 330px;
+			display:grid;
+			grid-template-columns: 10px 270px 25px;
+			background-color: #E9FD2F;
+			border-radius: 20px;
+			padding:10px;
+			margin:10px;
+			align-items: center;
+			border:none;
+			.deleteButton{
+				border-radius: 20px;
+				&:hover{
+					cursor: pointer;
+					opacity: 0.8;
+					border:none;
+				} 
+			}
+		}
+	}
+	.clearButton{
+		border-radius : 20px;
+		background-color: #FFF79C;
+		color : #040115;
+		outline: none;
+		border:none;
+		margin:10px;
+		padding:10px;
+		&:hover{
+			cursor: pointer;
+			opacity : 0.7;
+			border : none;
+		}
+	}
+}
